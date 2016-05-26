@@ -333,11 +333,11 @@ code {
   float: left;
   margin-left: 5px;
   margin-right: 5px;
-  opacity: 0.5;
+  color: #979797;
 }
 .devtools-menu > li.selected {
   position: relative;
-  opacity: 1;
+  color: #5a5a5a;
 }
 .devtools-menu > li.selected::after {
   content: "";
