@@ -65,6 +65,7 @@ header + section {
 
 footer {
   padding-bottom: 60px;
+  padding-top: 100px;
   color: #CBD0D8;
   font-size: 14px;
   font-weight: 300;
