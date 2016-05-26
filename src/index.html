@@ -78,7 +78,7 @@
             </li>
             <li class="selected">
               <i class="fa fa-archive" aria-hidden="true"></i>
-              <span>Storage (3)</span>
+              <span>Storage <span class="counter-label">3</span></span>
             </li>
             <li>
               <i class="fa fa-paper-plane" aria-hidden="true"></i>
@@ -173,7 +173,7 @@
         <p>
           Find and inspect JWTs in cookies, local storage, and requests.
         </p>
-        <div class="devtools">
+        <div id="devtools-jwt-requests" class="devtools">
           <div class="devtools-header">
             <div class="devtools-icons"></div>
             <ul class="devtools-menu">
@@ -207,7 +207,7 @@
             </li>
             <li class="selected">
               <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              <span>Requests (1)</span>
+              <span>Requests <span class="counter-label">1</span></span>
             </li>
           </ul>
           <ul class="devtools-filters">
@@ -293,10 +293,8 @@
                 <span>Encoded</span>
               </div>
               <div class="textarea-placeholder">
-                <span>
-                  <span style="color: #9b4500;">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span style="color: #890193;">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9</span>.<span style="color: #ca0000;">TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span>
-                  <span class="cursor blink"></span>
-                </span>
+                <span style="color: #9b4500;">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span><span>.</span><span style="color: #890193;">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9</span><span>.</span><span style="color: #ca0000;">TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span>
+                <span class="cursor blink"></span>
               </div>
             </div>
             <div class="devtools-jwt-decoded">
@@ -407,11 +405,24 @@
       </div>
     </footer>
     <script>
+      function animateRequests() {
+        var element = document.getElementById('devtools-jwt-requests');
+        var classNames = element.className;
+
+        if (classNames.indexOf('animate') === -1) {
+          element.className = classNames + ' animate';
+        }
+      }
+
       window.onscroll = function () {
         if (document.body.scrollTop > 397 || document.documentElement.scrollTop > 397) {
           document.getElementById('btn-install').className = 'btn fixed visible';
         } else {
           document.getElementById('btn-install').className = 'btn fixed hidden';
+        }
+
+        if (document.body.scrollTop + window.innerHeight > 1500 || document.documentElement.scrollTop + window.innerHeight > 1500) {
+          setTimeout(animateRequests, 200);
         }
       };
     </script>

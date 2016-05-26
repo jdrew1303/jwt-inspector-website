@@ -105,6 +105,20 @@ code {
   color: #890193;
 }
 
+.counter-label {
+  display: inline-block;
+  background: #979797;
+  color: white;
+  border-radius: 11px;
+  text-align: center;
+  font-size: 8px;
+  margin-left: 1px;
+  padding: 1px 4px;
+  margin-top: 1px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
 .feature {
   text-align: center;
 }
@@ -618,21 +632,26 @@ code {
   line-height: 12px;
   vertical-align: middle;
   margin-top: 0;
-  margin-left: -6px;
+  margin-left: -2px;
 }
-.textarea-placeholder {
+.devtools .textarea-placeholder {
   background: white;
   padding: 10px;
   height: 220px;
 }
-.textarea-placeholder label {
+.devtools .textarea-placeholder label {
   display: block;
   margin-bottom: 10px;
 }
-.textarea-placeholder span {
+.devtools .textarea-placeholder span {
   font-family: "Source Code Pro", monospace;
   word-wrap: break-word;
   font-size: 12px;
+}
+.devtools-jwt-empty {
+  line-height: 199px;
+  text-align: center;
+  color: #979797;
 }
 
 pre.json {
@@ -756,4 +775,28 @@ pre.json .line .key {
 .blink {
   -webkit-animation: blink 1.1s infinite;
   animation: blink 1.1s infinite;
+}
+
+#devtools-jwt-requests .devtools-jwt-menu .selected {
+  transition: width 0.05s ease-in;
+  width: 61px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#devtools-jwt-requests.animate .devtools-jwt-menu .selected {
+  width: 76px;
+}
+#devtools-jwt-requests .counter-label {
+  transition: transform 0.2s ease-in;
+  transform: scale3d(0, 0, 0);
+}
+#devtools-jwt-requests.animate .counter-label {
+  transform: scale3d(1, 1, 1);
+}
+#devtools-jwt-requests .devtools-table tbody tr {
+  transition: opacity 0.2s ease-in;
+  opacity: 0;
+}
+#devtools-jwt-requests.animate .devtools-table tbody tr {
+  opacity: 1;
 }
