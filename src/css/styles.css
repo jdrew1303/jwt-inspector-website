@@ -393,13 +393,14 @@ code {
 }
 .devtools-filters > li {
   float: left;
-  border-left: 1px solid #dedede;
   padding-left: 7px;
   padding-right: 7px;
 }
 .devtools-filters > li:first-child {
-  border-left: none;
   padding-left: 0;
+}
+.devtools-filters > li:last-child {
+  border-left: 1px solid #dedede;
 }
 .devtools .text-placeholder {
   display: inline-block;
@@ -450,6 +451,9 @@ code {
 .devtools-table th:nth-child(1) { width: 80px; }
 .devtools-table th:nth-child(2) { width: 50px; }
 .devtools-table th:nth-child(3) { width: 80px; }
+.devtools-table.jwt-requests th:nth-child(1) { width: 50px; }
+.devtools-table.jwt-requests th:nth-child(2) { width: auto; }
+.devtools-table.jwt-requests th:nth-child(3) { width: 50px; }
 .devtools-table > tbody > tr {
   background: white;
 }

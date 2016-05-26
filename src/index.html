@@ -201,13 +201,13 @@
               <i class="fa fa-circle" aria-hidden="true"></i>
               <span>Cookies</span>
             </li>
-            <li class="selected">
-              <i class="fa fa-archive" aria-hidden="true"></i>
-              <span>Storage (3)</span>
-            </li>
             <li>
+              <i class="fa fa-archive" aria-hidden="true"></i>
+              <span>Storage</span>
+            </li>
+            <li class="selected">
               <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              <span>Requests</span>
+              <span>Requests (1)</span>
             </li>
           </ul>
           <ul class="devtools-filters">
@@ -216,38 +216,28 @@
               <span>Current page</span>
             </li>
             <li>
+              <i class="fa fa-square" aria-hidden="true"></i>
+              <span>Preserve log</span>
+            </li>
+            <li>
               <i class="fa fa-filter" aria-hidden="true"></i>
               <span>Filter</span>
               <span class="text-placeholder"></span>
             </li>
           </ul>
-          <table class="devtools-table">
+          <table class="devtools-table jwt-requests">
             <thead>
               <tr>
-                <th>Key</th>
-                <th>Type</th>
-                <th>Domain</th>
-                <th>Value</th>
+                <th>Method</th>
+                <th>Url</th>
+                <th>Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>auth.token</td>
-                <td>local</td>
-                <td>localhost</td>
-                <td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</td>
-              </tr>
-              <tr>
-                <td>jwt</td>
-                <td>local</td>
-                <td>localhost</td>
-                <td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</td>
-              </tr>
-              <tr>
-                <td>token</td>
-                <td>local</td>
-                <td>localhost</td>
-                <td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</td>
+                <td>GET</td>
+                <td>http://localhost/?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</td>
+                <td>200</td>
               </tr>
             </tbody>
           </table>
