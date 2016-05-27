@@ -198,7 +198,8 @@ code {
 
 .social {
   position: absolute;
-  width: 100%;
+  left: 0;
+  right: 0;
   text-align: center;
   z-index: 10;
 }
@@ -274,6 +275,7 @@ code {
   right: 30px;
   padding: 10px 20px;
   box-shadow: 0 14px 11px -10px rgba(34, 34, 34, 0.3);
+  z-index: 100;
 }
 
 .hidden {
@@ -811,4 +813,149 @@ pre.json .line .key {
 }
 #devtools-jwt-requests.animate .devtools-table tbody tr {
   opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .container,
+  footer {
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  header p.description {
+    width: 100%;
+  }
+
+  .devtools {
+    width: 100%;
+  }
+
+  .btn.fixed {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  header p.description {
+    font-size: 17px;
+  }
+
+  section {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  header + section + section {
+    padding-top: 100px;
+  }
+
+  footer {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .container,
+  footer {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  section {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .devtools-menu > li:nth-child(7),
+  .devtools-menu > li:nth-child(8),
+  .devtools-menu > li:nth-child(9) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  p,
+  header p.description {
+    font-size: 16px;
+  }
+
+  .feature h2 {
+    font-size: 22px;
+  }
+
+  .btn {
+    padding: 12px 15px;
+  }
+
+  .devtools-menu > li:nth-child(5),
+  .devtools-menu > li:nth-child(6) {
+    display: none;
+  }
+}
+
+@media (max-width: 435px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .social {
+    margin-top: -27px;
+    text-align: right;
+  }
+
+  footer {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .devtools-menu > li:nth-child(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .feature h2 {
+    font-size: 20px;
+  }
+
+  p,
+  header p.description {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 10px;
+  }
+
+  .devtools-table th:nth-child(1) {
+    width: 60px;
+  }
+  .devtools-jwt-menu > li {
+    margin-right: -1px;
+  }
+  .devtools-menu > li:nth-child(3) {
+    display: none;
+  }
+
+  footer {
+    font-size: 12px;
+  }
 }
