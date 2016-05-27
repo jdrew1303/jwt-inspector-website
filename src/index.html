@@ -130,7 +130,7 @@
                 </div>
                 <div class="devtools-section-content">
                   <span class="jwt">
-                    eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+                    eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZjg5NjU1Ny0yMzgyLTRkNmUtYWJkOC1hMDFhOTFhYmQ5NGYiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpc19hZG1pbiI6dHJ1ZX0._lYAdmfszpyfbqWUeCC4LkfWbltC3uF29FiSPaHTJ70
                   </span>
                 </div>
               </div>
@@ -142,8 +142,8 @@
                 <div class="devtools-section-content">
                   <pre class="json">
                     <span class="line">{</span>
-                    <span class="line">  <span class="key">alg</span>: "HS256",</span>
-                    <span class="line">  <span class="key">typ</span>: "JWT"</span>
+                    <span class="line">  <span class="key">typ</span>: "JWT",</span>
+                    <span class="line">  <span class="key">alg</span>: "HS256"</span>
                     <span class="line">}</span>
                   </pre>
                 </div>
@@ -236,7 +236,7 @@
             <tbody>
               <tr>
                 <td>GET</td>
-                <td>http://localhost/?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</td>
+                <td>http://localhost/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZjg5NjU1Ny0yMzgyLTRkNmUtYWJkOC1hMDFhOTFhYmQ5NGYiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpc19hZG1pbiI6dHJ1ZX0._lYAdmfszpyfbqWUeCC4LkfWbltC3uF29FiSPaHTJ70</td>
                 <td>200</td>
               </tr>
             </tbody>
@@ -293,7 +293,7 @@
                 <span>Encoded</span>
               </div>
               <div class="textarea-placeholder">
-                <span class="jwt-header-color">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span><span>.</span><span class="jwt-payload-color">eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9</span><span>.</span><span class="jwt-signature-color">TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span>
+                <span class="jwt-header-color">eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9</span><span>.</span><span class="jwt-payload-color">eyJzdWIiOiJmZjg5NjU1Ny0yMzgyLTRkNmUtYWJkOC1hMDFhOTFhYmQ5NGYiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpc19hZG1pbiI6dHJ1ZX0</span><span>.</span><span class="jwt-signature-color">_lYAdmfszpyfbqWUeCC4LkfWbltC3uF29FiSPaHTJ70</span>
                 <span class="cursor blink"></span>
               </div>
             </div>
@@ -310,8 +310,8 @@
                   <div class="devtools-section-content">
                     <pre class="json">
                       <span class="line">{</span>
-                      <span class="line">  <span class="key">alg</span>: "HS256",</span>
-                      <span class="line">  <span class="key">typ</span>: "JWT"</span>
+                      <span class="line">  <span class="key">typ</span>: "JWT",</span>
+                      <span class="line">  <span class="key">alg</span>: "HS256"</span>
                       <span class="line">}</span>
                     </pre>
                   </div>
@@ -324,9 +324,9 @@
                   <div class="devtools-section-content">
                     <pre class="json">
                       <span class="line">{</span>
-                      <span class="line">  <span class="key">sub</span>: 1234567890,</span>
-                      <span class="line">  <span class="key">name</span>: "John Doe",</span>
-                      <span class="line">  <span class="key">admin</span>: true</span>
+                      <span class="line">  <span class="key">sub</span>: "ff896557-2382-4d6e-abd8-a01a91abd94f",</span>
+                      <span class="line">  <span class="key">email</span>: "john@example.com",</span>
+                      <span class="line">  <span class="key">is_admin</span>: true</span>
                       <span class="line">}</span>
                     </pre>
                   </div>
@@ -369,14 +369,14 @@
             </div>
             <div class="devtools-console">
               <div class="devtools-console-line">
-                console.jwt(<span class="string">'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ'</span>);
+                console.jwt(<span class="string">'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZjg5NjU1Ny0yMzgyLTRkNmUtYWJkOC1hMDFhOTFhYmQ5NGYiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJpc19hZG1pbiI6dHJ1ZX0._lYAdmfszpyfbqWUeCC4LkfWbltC3uF29FiSPaHTJ70'</span>);
               </div>
               <div class="devtools-console-line output">
                 <pre class="json">
                   <span class="line"><span class="name">JWT</span> {</span>
                   <span class="line">  <span class="key">header</span>: Object</span>
                   <span class="line">  <span class="key">payload</span>: Object</span>
-                  <span class="line">  <span class="key">signature</span>: <span class="string">"TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ"</span></span>
+                  <span class="line">  <span class="key">signature</span>: <span class="string">"_lYAdmfszpyfbqWUeCC4LkfWbltC3uF29FiSPaHTJ70"</span></span>
                   <span class="line">}</span>
                 </pre>
               </div>
