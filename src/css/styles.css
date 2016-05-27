@@ -57,10 +57,12 @@ section {
   padding-top: 100px;
   border-top: 1px solid #f0f0f0;
 }
-
 header + section {
   padding-top: 200px;
   padding-bottom: 0;
+}
+header + section + section {
+  border-top: none;
 }
 
 footer {
@@ -427,6 +429,7 @@ code {
   margin-left: 5px;
   margin-top: -2px;
   vertical-align: middle;
+  display: none;
 }
 .devtools-table {
   width: 100%;
@@ -534,6 +537,15 @@ code {
 }
 .devtools .jwt {
   font-family: "Source Code Pro", monospace;
+}
+.devtools .jwt-header-color {
+  color: #9b4500;
+}
+.devtools .jwt-payload-color {
+  color: #890193;
+}
+.devtools .jwt-signature-color {
+  color: #ca0000;
 }
 .devtools-console-line {
   font-family: "Source Code Pro", monospace;
