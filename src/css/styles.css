@@ -38,8 +38,7 @@ header {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding-bottom: 50px;
-  background-image: linear-gradient(to right bottom,#1a2980 20%,#354A84 45%,#595DD2 62%,#5387E6 83%,#26d0ce 100%);
-  background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(108deg,#4180DE,#62136B 90%);
+  background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(108deg,rgba(65,128,222,0.9),rgba(98,19,107,0.9) 90%);
 }
 header > .container {
   text-align: center;
