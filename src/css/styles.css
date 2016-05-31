@@ -63,6 +63,7 @@ section {
 header + section {
   padding-top: 200px;
   padding-bottom: 0;
+  border-top: none;
 }
 header + section + section {
   border-top: none;
