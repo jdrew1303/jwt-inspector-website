@@ -286,8 +286,9 @@ code {
   top: 30px;
   right: 30px;
   padding: 10px 20px;
-  box-shadow: 0 14px 11px -10px rgba(34, 34, 34, 0.3);
+  box-shadow: 0 0 5px 1px rgba(34, 34, 34, 0.2);
   z-index: 100;
+  color: #2D6EC4;
 }
 
 .hidden {
