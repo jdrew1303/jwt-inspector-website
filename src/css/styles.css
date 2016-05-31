@@ -636,17 +636,19 @@ code {
 .devtools-jwt-debug {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .devtools-jwt-encoded,
 .devtools-jwt-decoded {
   box-sizing: border-box;
-  float: left;
   width: 50%;
   height: 100%;
 }
 .devtools-jwt-decoded {
   padding: 0;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
 }
 .devtools-jwt-decoded .devtools-jwt-details {
   width: 100%;
