@@ -64,6 +64,9 @@ header + section {
 header + section + section {
   border-top: none;
 }
+section.section-bg {
+  background: #F8FAFD;
+}
 
 footer {
   padding-bottom: 60px;
