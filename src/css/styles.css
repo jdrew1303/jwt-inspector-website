@@ -38,7 +38,7 @@ header {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding-bottom: 50px;
-  background-image: -webkit-radial-gradient(closest-corner,rgba(16,47,70,0) 60%,rgba(16,47,70,.26)),-webkit-linear-gradient(108deg,rgba(65,128,222,0.9),rgba(98,19,107,0.9) 90%);
+  background-image: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, .26)), -webkit-linear-gradient(108deg, rgba(65, 128, 222, 0.9), rgba(98, 19, 107, 0.9) 90%);
 }
 header > .container {
   text-align: center;
@@ -75,7 +75,7 @@ section.section-bg {
 footer {
   padding-bottom: 60px;
   padding-top: 100px;
-  color: #CBD0D8;
+  color: #BBBACA;
   font-size: 14px;
   font-weight: 300;
 }
@@ -203,7 +203,8 @@ code {
   z-index: 20;
 }
 .love a {
-  color: #CBD0D8;
+  position: relative;
+  color: #BBBACA;
   text-decoration: none;
   -webkit-transition: color 0.1s ease-out;
   -moz-transition: color 0.1s ease-out;
@@ -211,15 +212,31 @@ code {
   transition: color 0.1s ease-out;
 }
 .love a:hover {
-  color: #4C92FF;
+  color: #6455ac;
+  background: #6455ac;
+  background: -webkit-radial-gradient(closest-corner, rgba(16,47,70,0) 60%, rgba(16,47,70,.26)), -webkit-linear-gradient(108deg, rgba(65,128,222,0.9), rgba(98,19,107,0.9) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.love a > span:first-child {
+  padding-right: 22px;
+}
+.love a .heart {
+  color: #E25151;
+  padding: 0 2px;
+  position: absolute;
+  top: 2px;
+  margin-left: -20px;
 }
 .love a:hover .heart {
   -webkit-animation: heartbeat .870s infinite;
   animation: heartbeat .870 infinite;
-}
-.heart {
-  color: #E25151;
-  padding: 0 2px;
+  background: #6455ac;
+  background: -webkit-linear-gradient(left, #654ca3, #6455ac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .social {
@@ -230,7 +247,7 @@ code {
   z-index: 10;
 }
 .social a {
-  color: #CBD0D8;
+  color: #BBBACA;
   padding: 0 3px;
   text-decoration: none;
   font-size: 16px;
@@ -240,7 +257,14 @@ code {
   transition: color 0.1s ease-out;
 }
 .social a:hover {
-  color: #4C92FF;
+  color: #6455ac;
+}
+.social a:hover i {
+  background: #6455ac;
+  background: -webkit-linear-gradient(-40deg, #8C41AB, #447CCE 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .browsers {
