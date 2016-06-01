@@ -47,7 +47,7 @@ header p.description {
   width: 730px;
   display: inline-block;
   color: rgba(255, 255, 255, 0.85);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 header .devtools {
   margin-bottom: -140px;
@@ -93,7 +93,7 @@ h1 {
   margin: 0;
   padding-top: 200px;
   color: white;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
 }
 h2 {
   font-size: 28px;
