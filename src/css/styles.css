@@ -173,6 +173,23 @@ code {
   opacity: 0.6;
 }
 
+.share {
+  position: absolute;
+  right: 0;
+  top: 30px;
+}
+.share > a.btn {
+  padding: 10px 10px;
+  padding-bottom: 9px;
+  font-size: 9px;
+  border: none;
+  box-shadow: none;
+}
+.share > a.btn > i {
+  font-size: 12px;
+  vertical-align: top;
+}
+
 .copyright {
   position: absolute;
   left: 0;
@@ -850,6 +867,10 @@ pre.json .line .key {
   .btn.fixed {
     display: none;
   }
+
+  .share {
+    right: 40px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -881,6 +902,11 @@ pre.json .line .key {
 
   section {
     padding-bottom: 20px;
+  }
+
+  .share {
+    top: 20px;
+    right: 20px;
   }
 }
 
