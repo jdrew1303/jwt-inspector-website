@@ -240,44 +240,46 @@ code {
 
 .btn {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 16px 25px;
   color: #54419C;
   font-size: 16px;
   font-weight: 400;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
   text-decoration: none;
   line-height: normal;
-  -webkit-transition: box-shadow .1s linear, background .1s linear, opacity .1s linear;
-  -moz-transition: box-shadow .1s linear, background .1s linear, opacity .1s linear;
-  -o-transition: box-shadow .1s linear, background .1s linear, opacity .1s linear;
-  transition: box-shadow .1s linear, background .1s linear, opacity .1s linear;
-
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.5px;
+  -webkit-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
+  -moz-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
+  -o-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
+  transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
 }
-.btn:hover {
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.05);
-  background: rgba(255, 255, 255, 1);
+.btn:hover,
+.btn:focus,
+.btn:active {
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.07);
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 .btn > i {
   padding-right: 3px;
 }
 
 .btn.btn-alt {
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  background: transparent;
-  color: white;
-  -webkit-transition: box-shadow .1s linear, border-color .1s linear;
-  -moz-transition: box-shadow .1s linear, border-color .1s linear;
-  -o-transition: box-shadow .1s linear, border-color .1s linear;
-  transition: box-shadow .1s linear, border-color .1s linear;
+  border-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.0);
+  color: rgba(255, 255, 255, 0.9);
 }
-.btn.btn-alt:hover {
-  border-color: rgba(255, 255, 255, 1);
+.btn.btn-alt:hover,
+.btn.btn-alt:focus,
+.btn.btn-alt:active {
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.02);
+  color: rgba(255, 255, 255, 1);
 }
 
 .btn.fixed {
@@ -303,7 +305,7 @@ code {
   margin-top: 15px;
 }
 .buttons > .btn {
-  margin-left: 5px;
+  margin-left: 10px;
 }
 .buttons > .btn:first-child {
   margin-left: 0;
@@ -901,7 +903,7 @@ pre.json .line .key {
   }
 
   .btn {
-    padding: 12px 15px;
+    padding: 15px 20px;
   }
 
   .devtools-menu > li:nth-child(5),
@@ -927,7 +929,8 @@ pre.json .line .key {
 
 @media (max-width: 400px) {
   .btn {
-    padding: 12px 10px;
+    font-size: 11px;
+    padding: 12px 17px;
   }
 }
 
@@ -957,6 +960,7 @@ pre.json .line .key {
 
   .btn {
     font-size: 10px;
+    padding: 11px 12px;
   }
 
   .devtools-table th:nth-child(1) {
