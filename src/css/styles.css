@@ -50,9 +50,29 @@ header p.description {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 header .devtools {
+  position: relative;
   margin-bottom: -140px;
   margin-top: 30px;
   box-shadow: 3px 3px rgba(86, 95, 171, 0.065);
+  overflow: visible;
+}
+header .devtools-shadow {
+  position: absolute;
+  left: -100px;
+  right: -100px;
+  top: -100px;
+  height: 111px;
+  padding: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+  pointer-events: none;
+}
+header .devtools-shadow::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 230px;
+  box-shadow: 0 0 100px 0 rgba(0, 0, 0, 0.22);
 }
 
 section {
@@ -553,7 +573,10 @@ code {
 }
 .devtools-content {
   position: relative;
-  height: 250px;
+  height: 219px;
+  background: white;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .devtools-jwt-details {
   width: 70%;
@@ -562,6 +585,7 @@ code {
   right: 0;
   bottom: 0;
   border-left: 1px solid #cccccc;
+  overflow: hidden;
 }
 .devtools-jwt-header {
   font-weight: 400;
@@ -744,6 +768,25 @@ pre.json .line .key {
   color: #ca0000;
 }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes slideInUp {
   from {
     -webkit-transform: translate3d(0, 10%, 0);
@@ -777,6 +820,17 @@ pre.json .line .key {
   animation-duration: 0.5s;
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated .devtools-shadow {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
