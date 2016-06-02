@@ -341,9 +341,20 @@ code {
   top: 30px;
   right: 30px;
   padding: 10px 20px;
-  box-shadow: 0 0 5px 1px rgba(34, 34, 34, 0.2);
+  box-shadow: 0 14px 10px -10px rgba(0, 0, 0, 0.25);
   z-index: 100;
-  color: #2D6EC4;
+  background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  color: white;
+  -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  -o-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+}
+.btn.fixed:hover,
+.btn.fixed:focus,
+.btn.fixed:active {
+  box-shadow: 0 16px 12px -10px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
 .hidden {
