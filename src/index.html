@@ -435,7 +435,7 @@
           document.getElementById('btn-install').className = 'btn fixed hidden';
         }
 
-        if (document.body.scrollTop + window.innerHeight > 1020 || document.documentElement.scrollTop + window.innerHeight > 120) {
+        if (document.body.scrollTop + window.innerHeight > 1020 || document.documentElement.scrollTop + window.innerHeight > 1020) {
           setTimeout(animateSection.bind(null, 1), 100);
         }
 
@@ -449,7 +449,11 @@
       }
 
       window.onscroll = scrollHandler;
-      window.onload = scrollHandler;
+      window.onresize = scrollHandler;
+
+      window.onload = function () {
+        setTimeout(scrollHandler, 100);
+      };
     </script>
   </body>
 </html>
