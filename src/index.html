@@ -56,7 +56,7 @@
         </p>
 
         <div class="devtools animated slideInUp">
-          <div class="devtools-shadow"></div>
+          <div class="devtools-shadow animated fadeIn"></div>
           <div class="devtools-header">
             <div class="devtools-icons"></div>
             <ul class="devtools-menu">
@@ -175,13 +175,13 @@
         </ul>
       </div>
     </section>
-    <section>
+    <section id="section-1">
       <div class="container feature">
         <h2>Inspect JWTs everywhere</h2>
         <p>
           Find and inspect JWTs in cookies, local storage, and requests.
         </p>
-        <div id="devtools-jwt-requests" class="devtools">
+        <div class="devtools">
           <div class="devtools-header">
             <div class="devtools-icons"></div>
             <ul class="devtools-menu">
@@ -252,7 +252,7 @@
         </div>
       </div>
     </section>
-    <section class="section-bg">
+    <section id="section-2" class="section-bg">
       <div class="container feature left">
         <h2>Easily debug JWTs</h2>
         <p>
@@ -351,7 +351,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="section-3">
       <div class="container feature">
         <h2>Debug JWTs with the Console</h2>
         <p>
@@ -413,26 +413,43 @@
       </div>
     </footer>
     <script>
-      function animateRequests() {
-        var element = document.getElementById('devtools-jwt-requests');
-        var classNames = element.className;
+      function animateSection(nr) {
+        var sectionId = 'section-' + nr;
+        var animation = nr % 2 ? 'slideInLeft' : 'slideInRight';
 
-        if (classNames.indexOf('animate') === -1) {
-          element.className = classNames + ' animate';
+        var h2 = document.querySelector('#' + sectionId + ' > .feature > h2');
+        var p = document.querySelector('#' + sectionId + ' > .feature > p');
+        var devtools = document.querySelector('#' + sectionId + ' > .feature > .devtools');
+
+        if (h2.className.indexOf('animated') === -1) {
+          h2.className = h2.className + ' animated delay-200 ' + animation;
+          p.className = p.className + ' animated delay-100 ' + animation;
+          devtools.className = devtools.className + ' animated ' + animation;
         }
       }
 
-      window.onscroll = function () {
+      function scrollHandler() {
         if (document.body.scrollTop > 397 || document.documentElement.scrollTop > 397) {
           document.getElementById('btn-install').className = 'btn fixed visible';
         } else {
           document.getElementById('btn-install').className = 'btn fixed hidden';
         }
 
-        if (document.body.scrollTop + window.innerHeight > 1500 || document.documentElement.scrollTop + window.innerHeight > 1500) {
-          setTimeout(animateRequests, 200);
+        if (document.body.scrollTop + window.innerHeight > 1020 || document.documentElement.scrollTop + window.innerHeight > 120) {
+          setTimeout(animateSection.bind(null, 1), 100);
         }
-      };
+
+        if (document.body.scrollTop + window.innerHeight > 1650 || document.documentElement.scrollTop + window.innerHeight > 1650) {
+          setTimeout(animateSection.bind(null, 2), 100);
+        }
+
+        if (document.body.scrollTop + window.innerHeight > 2260 || document.documentElement.scrollTop + window.innerHeight > 2260) {
+          setTimeout(animateSection.bind(null, 3), 100);
+        }
+      }
+
+      window.onscroll = scrollHandler;
+      window.onload = scrollHandler;
     </script>
   </body>
 </html>
