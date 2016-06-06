@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JWT Inspector - Chrome extension to inspect and debug JSON Web Tokens</title>
+    <title>JWT Inspector - Browser extension to inspect and debug JSON Web Tokens</title>
     <meta charset="utf-8">
-    <meta name="description" content="Chrome extension to debug JWTs, made by Stormpath.">
+    <meta name="description" content="Browser extension to debug JWTs, made by Stormpath.">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -33,15 +33,25 @@
         <h1>Gain control over your JWTs</h1>
 
         <p class="description">
-          JWT Inspector is a Chrome extension that lets you inspect JSON Web Tokens
+          JWT Inspector is a browser extension that lets you inspect JSON Web Tokens
           in requests, cookies and local storage. Also debug any JWT directly from
           the console or in the built-in UI.
         </p>
 
         <p class="buttons">
-          <a href="#" class="btn">
+          <a href="#" class="btn chrome">
             <i class="fa fa-chrome" aria-hidden="true"></i>
             Add to Chrome
+          </a>
+
+          <a href="#" class="btn firefox">
+            <i class="fa fa-firefox" aria-hidden="true"></i>
+            Add to Firefox
+          </a>
+
+          <a href="#" class="btn safari">
+            <i class="fa fa-safari" aria-hidden="true"></i>
+            Add to Safari
           </a>
 
           <a href="https://github.com/stormpath/jwt-debugger" target="_blank" rel="nofollow" class="btn btn-alt">
@@ -49,10 +59,22 @@
             View on GitHub
           </a>
 
-          <a id="btn-install" href="#" class="btn fixed hidden">
+          <a id="btn-install" href="#" class="btn fixed hidden chrome">
             <i class="fa fa-chrome" aria-hidden="true"></i>
             Add to Chrome
           </a>
+        </p>
+
+        <p class="small chrome">
+          Soon also available for Firefox and Safari. <a href="#" onclick="showModal(); return false;">Click here</a> to get notified.
+        </p>
+        <p class="small firefox">
+          It's at the moment only available for Chrome. Click the <em>Add to Firefox</em> button
+          to get notified when it comes to Firefox.
+        </p>
+        <p class="small safari">
+          It's at the moment only available for Chrome. Click the <em>Add to Safari</em> button
+          to get notified when it comes to Safari.
         </p>
 
         <div class="devtools animated slideInUp">
@@ -167,12 +189,21 @@
         </div>
       </div>
     </header>
-    <section>
+    <!--section>
       <div class="container">
         <ul class="browsers">
           <li><i class="fa fa-safari" aria-hidden="true"></i></li>
           <li><i class="fa fa-firefox" aria-hidden="true"></i></li>
         </ul>
+      </div>
+    </section-->
+    <section>
+      <div class="container">
+        <div class="stormpath-banner">
+          <img src="img/stormpath-logo.png">
+          <h4>Made by Stormpath - The Identity API for Developers</h4>
+          <p>Powerful Authentication, Authorization, and User Management for Any Application.</p>
+        </div>
       </div>
     </section>
     <section id="section-1">
@@ -412,7 +443,32 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal-content"></div>
+    </div>
     <script>
+      var isChrome = !!window.chrome && !!window.chrome.webstore;
+      var isFirefox = typeof InstallTrigger !== 'undefined';
+      var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+      if (isChrome) {
+        document.body.classList.add('chrome');
+      } else if (isFirefox) {
+        document.body.classList.add('firefox');
+      } else if (isSafari) {
+        document.body.classList.add('safari');
+      }
+
+      function showModal() {
+        var modal = document.querySelector('.modal');
+        modal.className = 'modal show';
+      }
+
+      function hideModal() {
+        var modal = document.querySelector('.modal');
+        modal.className = 'modal';
+      }
+
       function animateSection(nr) {
         var sectionId = 'section-' + nr;
         var animation = nr % 2 ? 'slideInLeft' : 'slideInRight';
@@ -429,10 +485,14 @@
       }
 
       function scrollHandler() {
+        var btnInstall = document.getElementById('btn-install');
+
         if (document.body.scrollTop > 630 || document.documentElement.scrollTop > 630) {
-          document.getElementById('btn-install').className = 'btn fixed visible';
+          btnInstall.classList.remove('hidden');
+          btnInstall.classList.add('visible');
         } else {
-          document.getElementById('btn-install').className = 'btn fixed hidden';
+          btnInstall.classList.remove('visible');
+          btnInstall.classList.add('hidden');
         }
 
         if (document.body.scrollTop + window.innerHeight > 1020 || document.documentElement.scrollTop + window.innerHeight > 1020) {

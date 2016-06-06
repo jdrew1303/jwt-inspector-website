@@ -52,7 +52,7 @@ header p.description {
 header .devtools {
   position: relative;
   margin-bottom: -140px;
-  margin-top: 30px;
+  margin-top: 32px;
   box-shadow: 3px 3px rgba(86, 95, 171, 0.065);
   overflow: visible;
 }
@@ -84,6 +84,9 @@ header + section {
   padding-top: 200px;
   padding-bottom: 0;
   border-top: none;
+}
+header + section .container {
+  text-align: center;
 }
 header + section + section {
   border-top: none;
@@ -124,6 +127,23 @@ p {
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
+}
+p.small {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+}
+p.small a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  -webkit-transition: color 0.1s ease-out;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+}
+p.small a:hover,
+p.small a:focus,
+p.small a:active {
+  color: rgba(255, 255, 255, 1);
 }
 
 strong {
@@ -368,6 +388,7 @@ code {
 
 .buttons {
   margin-top: 15px;
+  margin-bottom: 10px;
 }
 .buttons > .btn {
   margin-left: 10px;
@@ -769,6 +790,91 @@ pre.json .line {
 }
 pre.json .line .key {
   color: #ca0000;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(96, 91, 172, 0);
+  z-index: 200;
+  display: flex;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  pointer-events: none;
+}
+.modal.show {
+  background-color: rgba(96, 91, 172, 0.4);
+  pointer-events: auto;
+}
+.modal-content {
+  width: 600px;
+  height: 300px;
+  background: white;
+  margin: auto;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 3px;
+  -webkit-transform: translate3d(0, -100px, 0);
+  -moz-transform: translate3d(0, -100px, 0);
+  -o-transform: translate3d(0, -100px, 0);
+  transform: translate3d(-0, -100px, 0);
+  -webkit-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal.show .modal-content {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.stormpath-banner {
+  width: 860px;
+  display: inline-block;
+  border: 1px solid #F0F0F0;
+  border-radius: 3px;
+  padding: 40px 30px;
+  padding-bottom: 36px;
+  padding-left: 200px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.stormpath-banner img {
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 120px;
+  top: 55px;
+}
+.stormpath-banner h4 {
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.stormpath-banner p {
+  font-size: 14px;
+  margin: 0;
+}
+
+body .chrome,
+body .firefox,
+body .safari {
+  display: none;
+}
+body.chrome .chrome,
+body.firefox .firefox,
+body.safari .safari {
+  display: initial;
 }
 
 .animated {
