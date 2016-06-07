@@ -883,14 +883,58 @@ pre.json .line .key {
   margin: 0;
   color: #656A71;
 }
+.modal form {
+  overflow: auto;
+}
 .modal .input {
-  padding: 18px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 50px;
   width: 300px;
   margin-bottom: 7px;
-  margin-right: 7px;
   vertical-align: top;
   border: 1px solid #DFDFDF;
-  border-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: none;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
+  float: left;
+}
+.modal .input:focus {
+  outline: none;
+}
+.modal .input::-webkit-input-placeholder {
+  color: #A9A9A9;
+  opacity: 1;
+}
+.modal .input:-moz-placeholder {
+  color: #A9A9A9;
+  opacity: 1;
+}
+.modal .input::-moz-placeholder {
+  color: #A9A9A9;
+  opacity: 1;
+}
+.modal .input:-ms-input-placeholder {
+  color: #A9A9A9;
+  opacity: 1;
+}
+.modal .input:placeholder-shown {
+  color: #A9A9A9;
+  opacity: 1;
+}
+.modal .btn {
+  float: left;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  line-height: 50px;
+  padding: 0 25px;
+  border: none;
+}
+.modal .btn:hover,
+.modal .btn:focus,
+.modal .btn:active {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.05);
 }
 
 .stormpath-banner {
