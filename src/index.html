@@ -44,12 +44,12 @@
             Add to Chrome
           </a>
 
-          <a href="#" class="btn firefox">
+          <a href="#" class="btn firefox" onclick="showModal(); return false;">
             <i class="fa fa-firefox" aria-hidden="true"></i>
             Add to Firefox
           </a>
 
-          <a href="#" class="btn safari">
+          <a href="#" class="btn safari" onclick="showModal(); return false;">
             <i class="fa fa-safari" aria-hidden="true"></i>
             Add to Safari
           </a>
@@ -66,7 +66,7 @@
         </p>
 
         <p class="small chrome">
-          Soon also available for Firefox and Safari. <a href="#" onclick="showModal(); return false;">Click here</a> to get notified.
+          Soon also available for Firefox and Safari.
         </p>
         <p class="small firefox">
           It's at the moment only available for Chrome. Click the <em>Add to Firefox</em> button
@@ -189,23 +189,6 @@
         </div>
       </div>
     </header>
-    <!--section>
-      <div class="container">
-        <ul class="browsers">
-          <li><i class="fa fa-safari" aria-hidden="true"></i></li>
-          <li><i class="fa fa-firefox" aria-hidden="true"></i></li>
-        </ul>
-      </div>
-    </section-->
-    <section>
-      <div class="container">
-        <div class="stormpath-banner">
-          <img src="img/stormpath-logo.png">
-          <h4>Made by Stormpath - The Identity API for Developers</h4>
-          <p>Powerful Authentication, Authorization, and User Management for Any Application.</p>
-        </div>
-      </div>
-    </section>
     <section id="section-1">
       <div class="container feature">
         <h2>Inspect JWTs everywhere</h2>
@@ -444,7 +427,22 @@
       </div>
     </footer>
     <div class="modal">
-      <div class="modal-content"></div>
+      <div class="modal-content">
+        <div class="close" onclick="hideModal()" title="Close">&times;</div>
+        <h4>It's not ready for Firefox just yet...</h4>
+        <p>
+          It's at the moment only available for Chrome. But enter your email address
+          to get notified when it comes to Firefox. Each subscription will make us
+          work a little harder.
+        </p>
+        <form>
+          <input type="email" class="input" placeholder="Your email address" required />
+          <button class="btn colored">Get notified</button>
+        </form>
+        <p class="small">
+          We won't send you any spam, we promise!
+        </p>
+      </div>
     </div>
     <script>
       var isChrome = !!window.chrome && !!window.chrome.webstore;
@@ -513,6 +511,14 @@
 
       window.onload = function () {
         setTimeout(scrollHandler, 100);
+      };
+
+      document.querySelector('.modal').onclick = function () {
+        hideModal();
+      };
+
+      document.querySelector('.modal-content').onclick = function (event) {
+        event.stopPropagation();
       };
     </script>
   </body>

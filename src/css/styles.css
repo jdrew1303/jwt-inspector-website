@@ -82,7 +82,6 @@ section {
 }
 header + section {
   padding-top: 200px;
-  padding-bottom: 0;
   border-top: none;
 }
 header + section .container {
@@ -327,6 +326,7 @@ code {
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 0.5px;
+  cursor: pointer;
   -webkit-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
   -moz-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
   -o-transition: color .1s ease-out, border-color .1s ease-out, background-color .1s ease-out, box-shadow .1s ease-out, opacity .1s ease-out;
@@ -374,6 +374,20 @@ code {
 .btn.fixed:focus,
 .btn.fixed:active {
   box-shadow: 0 16px 12px -10px rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+}
+
+.btn.colored {
+  background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  color: white;
+  -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  -o-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+  transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
+}
+.btn.colored:hover,
+.btn.colored:focus,
+.btn.colored:active {
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
@@ -812,10 +826,12 @@ pre.json .line .key {
   pointer-events: auto;
 }
 .modal-content {
+  position: relative;
+  box-sizing: border-box;
   width: 600px;
-  height: 300px;
   background: white;
   margin: auto;
+  padding: 40px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.22);
   border-radius: 3px;
   -webkit-transform: translate3d(0, -100px, 0);
@@ -837,6 +853,45 @@ pre.json .line .key {
   opacity: 1;
   pointer-events: auto;
 }
+.modal .close {
+  font-size: 18px;
+  font-weight: 300;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
+  transition: opacity .2s ease-in-out;
+}
+.modal .close:hover {
+  opacity: 1;
+}
+.modal h4 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.modal p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.modal p.small {
+  font-size: 11px;
+  margin: 0;
+  color: #656A71;
+}
+.modal .input {
+  padding: 18px;
+  width: 300px;
+  margin-bottom: 7px;
+  margin-right: 7px;
+  vertical-align: top;
+  border: 1px solid #DFDFDF;
+  border-radius: 3px;
+}
 
 .stormpath-banner {
   width: 860px;
@@ -848,12 +903,13 @@ pre.json .line .key {
   padding-left: 200px;
   box-sizing: border-box;
   text-align: left;
+  position: relative;
 }
 .stormpath-banner img {
   height: 20px;
   display: block;
   position: absolute;
-  left: 120px;
+  left: 40px;
   top: 55px;
 }
 .stormpath-banner h4 {
