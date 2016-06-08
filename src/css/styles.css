@@ -39,6 +39,9 @@ header {
   -moz-box-sizing: border-box;
   padding-bottom: 50px;
   background-image: -webkit-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, .26)), -webkit-linear-gradient(108deg, rgba(65, 128, 222, 0.9), rgba(98, 19, 107, 0.9) 90%);
+  background-image: -moz-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, .26)), -moz-linear-gradient(108deg, rgba(65, 128, 222, 0.9), rgba(98, 19, 107, 0.9) 90%);
+  background-image: -o-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, .26)), -o-linear-gradient(108deg, rgba(65, 128, 222, 0.9), rgba(98, 19, 107, 0.9) 90%);
+  background-image: -ms-radial-gradient(closest-corner, rgba(16, 47, 70, 0) 60%, rgba(16, 47, 70, .26)), -ms-linear-gradient(108deg, rgba(65, 128, 222, 0.9), rgba(98, 19, 107, 0.9) 90%);
 }
 header > .container {
   text-align: center;
@@ -274,8 +277,7 @@ code {
 }
 .love a:hover {
   color: #6455ac;
-  background: #6455ac;
-  background: -webkit-radial-gradient(closest-corner, rgba(16,47,70,0) 60%, rgba(16,47,70,.26)), -webkit-linear-gradient(108deg, rgba(65,128,222,0.9), rgba(98,19,107,0.9) 90%);
+  background-image: -webkit-radial-gradient(closest-corner, rgba(16,47,70,0) 60%, rgba(16,47,70,.26)), -webkit-linear-gradient(108deg, rgba(65,128,222,0.9), rgba(98,19,107,0.9) 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -292,9 +294,12 @@ code {
 }
 .love a:hover .heart {
   -webkit-animation: heartbeat .870s infinite;
+  -moz-animation: heartbeat .870s infinite;
+  -o-animation: heartbeat .870s infinite;
+  -ms-animation: heartbeat .870s infinite;
   animation: heartbeat .870 infinite;
-  background: #6455ac;
-  background: -webkit-linear-gradient(left, #654ca3, #6455ac);
+  color: #6455ac;
+  background-image: -webkit-linear-gradient(left, #654ca3, #6455ac);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -321,8 +326,7 @@ code {
   color: #6455ac;
 }
 .social a:hover i {
-  background: #6455ac;
-  background: -webkit-linear-gradient(-40deg, #8C41AB, #447CCE 90%);
+  background-image: -webkit-linear-gradient(-40deg, #8C41AB, #447CCE 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -393,7 +397,12 @@ code {
   padding: 10px 20px;
   box-shadow: 0 14px 10px -10px rgba(0, 0, 0, 0.25);
   z-index: 100;
+  background: rgba(101, 76, 163, 1);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -o-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   color: white;
   -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
   -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
@@ -404,11 +413,21 @@ code {
 .btn.fixed:focus,
 .btn.fixed:active {
   box-shadow: 0 16px 12px -10px rgba(0, 0, 0, 0.25);
+  background: rgba(101, 76, 163, 0.95);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -o-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
 .btn.colored {
+  background: rgba(101, 76, 163, 1);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -o-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
+  background-image: linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   color: white;
   -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
   -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
@@ -418,7 +437,12 @@ code {
 .btn.colored:hover,
 .btn.colored:focus,
 .btn.colored:active {
+  background: rgba(101, 76, 163, 0.95);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -o-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
+  background-image: linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
 .hidden {
