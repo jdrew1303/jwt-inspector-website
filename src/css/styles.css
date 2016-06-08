@@ -190,19 +190,49 @@ code {
 
 .logo,
 .logo:visited {
-  text-decoration: none;
   position: absolute;
-  top: 80px;
-  margin-left: -15px;
-  color: #4E4D4D;
+  top: 30px;
+  left: 0;
   display: inline-block;
-  width: 52px;
-  height: 52px;
-  border: 1px solid #5A5A5A;
-  border-radius: 10px;
-  box-shadow: inset 0px -1px #5A5A5A;
-  background: white;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+.logo a,
+.logo a:visited {
+  text-decoration: none;
+  display: inline-block;
+  opacity: 0.8;
+  color: white;
+  -webkit-transition: opacity 0.1s ease-out;
+  -moz-transition: opacity 0.1s ease-out;
+  -o-transition: opacity 0.1s ease-out;
+  transition: opacity 0.1s ease-out;
+}
+.logo a:hover,
+.logo a:focus,
+.logo a:active {
+  opacity: 1;
+}
+.logo .icon img {
+  width: 32px;
+}
+.logo .icon .text {
+  vertical-align: top;
+  line-height: 20px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+.logo .credits {
+  position: absolute;
+  left: 45px;
+  top: 19px;
+  font-size: 11px;
+  vertical-align: top;
+}
+.logo .credits img {
+  width: 72px;
+  vertical-align: top;
+  padding-left: 1px;
+  padding-top: 1px;
 }
 
 .share {
