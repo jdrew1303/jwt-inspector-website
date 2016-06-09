@@ -7,6 +7,8 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/henclmbnehmcpbjgipaajbggekefngob">
+
     <link rel="shortcut icon" type="image/png" href="img/icons/icon-32.png">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
@@ -49,7 +51,7 @@
         </p>
 
         <p class="buttons">
-          <a href="#" class="btn chrome">
+          <a href="#" class="btn chrome" onclick="chrome.webstore.install(); return false;">
             <i class="fa fa-chrome" aria-hidden="true"></i>
             Add to Chrome
           </a>
@@ -69,7 +71,7 @@
             View on GitHub
           </a>
 
-          <a href="#" class="btn btn-install fixed hidden chrome">
+          <a href="#" class="btn btn-install fixed hidden chrome" onclick="chrome.webstore.install(); return false;">
             <i class="fa fa-chrome" aria-hidden="true"></i>
             Add to Chrome
           </a>
