@@ -54,12 +54,12 @@
             Add to Chrome
           </a>
 
-          <a href="#" class="btn firefox" onclick="showModal(); return false;">
+          <a href="#" class="btn firefox" onclick="showModal('firefox'); return false;">
             <i class="fa fa-firefox" aria-hidden="true"></i>
             Add to Firefox
           </a>
 
-          <a href="#" class="btn safari" onclick="showModal(); return false;">
+          <a href="#" class="btn safari" onclick="showModal('safari'); return false;">
             <i class="fa fa-safari" aria-hidden="true"></i>
             Add to Safari
           </a>
@@ -436,13 +436,31 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div id="modal-firefox" class="modal">
       <div class="modal-content">
         <div class="close" onclick="hideModal()" title="Close">&times;</div>
         <h4>It's not ready for Firefox just yet...</h4>
         <p>
           It's at the moment only available for Chrome. But enter your email address
           to get notified when it comes to Firefox. Each subscription will make us
+          work a little harder.
+        </p>
+        <form>
+          <input type="email" class="input" placeholder="Your email address" required />
+          <button class="btn colored">Get notified</button>
+        </form>
+        <p class="small">
+          We won't send you any spam, we promise!
+        </p>
+      </div>
+    </div>
+    <div id="modal-safari" class="modal">
+      <div class="modal-content">
+        <div class="close" onclick="hideModal()" title="Close">&times;</div>
+        <h4>It's not ready for Safari just yet...</h4>
+        <p>
+          It's at the moment only available for Chrome. But enter your email address
+          to get notified when it comes to Safari. Each subscription will make us
           work a little harder.
         </p>
         <form>
@@ -467,13 +485,13 @@
         document.body.classList.add('safari');
       }
 
-      function showModal() {
-        var modal = document.querySelector('.modal');
+      function showModal(modalName) {
+        var modal = document.getElementById('modal-' + modalName);
         modal.className = 'modal show';
       }
 
       function hideModal() {
-        var modal = document.querySelector('.modal');
+        var modal = document.querySelector('.modal.show');
         modal.className = 'modal';
       }
 
@@ -523,13 +541,17 @@
         setTimeout(scrollHandler, 100);
       };
 
-      document.querySelector('.modal').onclick = function () {
-        hideModal();
-      };
+      var modals = document.querySelectorAll('.modal');
 
-      document.querySelector('.modal-content').onclick = function (event) {
-        event.stopPropagation();
-      };
+      for (var i = 0; i < modals.length; ++i) {
+        modals[i].onclick = function () {
+          hideModal();
+        };
+
+        modals[i].querySelector('.modal-content').onclick = function (event) {
+          event.stopPropagation();
+        };
+      }
     </script>
   </body>
 </html>
