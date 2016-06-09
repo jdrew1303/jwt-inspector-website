@@ -399,12 +399,10 @@ code {
   padding: 10px 20px;
   box-shadow: 0 14px 10px -10px rgba(0, 0, 0, 0.25);
   z-index: 100;
-  background: rgba(101, 76, 163, 1);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -o-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
-  background-image: linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   color: white;
   -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
   -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
@@ -415,21 +413,17 @@ code {
 .btn.fixed:focus,
 .btn.fixed:active {
   box-shadow: 0 16px 12px -10px rgba(0, 0, 0, 0.25);
-  background: rgba(101, 76, 163, 0.95);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -o-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
-  background-image: linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
 .btn.colored {
-  background: rgba(101, 76, 163, 1);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -o-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
-  background-image: linear-gradient(left, rgba(101, 76, 163, 1), rgba(100, 85, 172, 1));
   color: white;
   -webkit-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
   -moz-transition: background-image .1s ease-out, box-shadow .1s ease-out, opacity .2s ease-out;
@@ -439,12 +433,10 @@ code {
 .btn.colored:hover,
 .btn.colored:focus,
 .btn.colored:active {
-  background: rgba(101, 76, 163, 0.95);
   background-image: -webkit-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -moz-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -o-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
   background-image: -ms-linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
-  background-image: linear-gradient(left, rgba(101, 76, 163, 0.95), rgba(100, 85, 172, 0.95));
 }
 
 .hidden {
@@ -943,9 +935,9 @@ pre.json .line .key {
   overflow: auto;
 }
 .modal .input {
-  padding: 0 16px;
+  padding: 16px;
+  height: 16px;
   font-size: 14px;
-  line-height: 50px;
   width: 300px;
   margin-bottom: 7px;
   vertical-align: top;
@@ -983,9 +975,10 @@ pre.json .line .key {
   float: left;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
-  line-height: 50px;
-  padding: 0 25px;
+  padding: 17px 25px;
+  height: 50px;
   border: none;
+  margin: 0;
 }
 .modal .btn:hover,
 .modal .btn:focus,
