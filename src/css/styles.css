@@ -1301,6 +1301,23 @@ body.safari .safari {
     top: 20px;
     right: 20px;
   }
+
+  .modal-content {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    padding: 35px;
+    border-radius: 0;
+    border: none;
+    border: 0;
+    position: fixed;
+    box-shadow: none;
+  }
+  .modal .input {
+    width: 140px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1344,12 +1361,28 @@ body.safari .safari {
   footer {
     padding-top: 40px;
   }
+
+  .modal .input {
+    width: 180px;
+    padding: 10px;
+    height: 20px;
+    font-size: 12px;
+  }
+  .modal .btn {
+    padding: 11px 20px;
+    height: 42px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 400px) {
   .btn {
     font-size: 11px;
     padding: 12px 17px;
+  }
+
+  .modal .input {
+    width: 150px;
   }
 }
 
@@ -1394,5 +1427,15 @@ body.safari .safari {
 
   footer {
     font-size: 12px;
+  }
+
+  .modal h4 {
+    font-size: 16px;
+  }
+  .modal p {
+    font-size: 14px;
+  }
+  .modal .input {
+    width: 100px;
   }
 }
