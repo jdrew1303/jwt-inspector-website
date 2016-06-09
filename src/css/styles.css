@@ -242,8 +242,8 @@ code {
 
 .share {
   position: absolute;
-  right: 0;
   top: 30px;
+  right: 0;
 }
 .share > a.btn {
   padding: 10px 10px;
@@ -1261,6 +1261,10 @@ body.safari .safari {
     display: none;
   }
 
+  .logo {
+    left: 40px;
+  }
+
   .share {
     right: 40px;
   }
@@ -1295,6 +1299,11 @@ body.safari .safari {
 
   section {
     padding-bottom: 20px;
+  }
+
+  .logo {
+    top: 20px;
+    left: 20px;
   }
 
   .share {
