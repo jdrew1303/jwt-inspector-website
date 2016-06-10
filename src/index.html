@@ -493,6 +493,11 @@
       var isFirefox = typeof InstallTrigger !== 'undefined';
       var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
+      // If Chrome on iOS...
+      if (navigator.userAgent.indexOf('CriOS') > -1) {
+        isChrome = true;
+      }
+
       if (isChrome) {
         document.body.classList.add('chrome');
       } else if (isFirefox) {

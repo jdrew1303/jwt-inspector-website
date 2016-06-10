@@ -967,6 +967,7 @@ pre.json .line .key {
   margin-bottom: 7px;
   vertical-align: top;
   border: 1px solid #DFDFDF;
+  border-radius: 0;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-right: none;
