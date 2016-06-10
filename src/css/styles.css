@@ -299,7 +299,7 @@ code {
   -moz-animation: heartbeat .870s infinite;
   -o-animation: heartbeat .870s infinite;
   -ms-animation: heartbeat .870s infinite;
-  animation: heartbeat .870 infinite;
+  animation: heartbeat .870s infinite;
   color: #6455ac;
   background-image: -webkit-linear-gradient(left, #654ca3, #6455ac);
   -webkit-background-clip: text;
@@ -931,8 +931,33 @@ pre.json .line .key {
   margin: 0;
   color: #656A71;
 }
+.modal .thanks {
+  display: none;
+  margin: 0;
+}
 .modal form {
   overflow: auto;
+}
+.modal form p {
+  clear: both;
+}
+.modal form.submitted {
+  display: none;
+}
+.modal form.submitted ~ .thanks {
+  display: initial;
+}
+.modal form.submitted ~ .thanks .heart {
+  padding: 0 2px;
+  -webkit-animation: heartbeat .870s;
+  -moz-animation: heartbeat .870s;
+  -o-animation: heartbeat .870s;
+  -ms-animation: heartbeat .870s;
+  animation: heartbeat .870s;
+  -webkit-animation-iteration-count: 2;
+  animation-iteration-count: 2
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 .modal .input {
   padding: 16px;
