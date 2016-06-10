@@ -1,4 +1,5 @@
-# JWT Debugger Website
+# JWT Inspector Website
+<https://jwtinspector.io>
 
 ## How to run
 
