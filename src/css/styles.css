@@ -90,9 +90,6 @@ header + section {
 header + section .container {
   text-align: center;
 }
-header + section + section {
-  border-top: none;
-}
 section.section-bg {
   background: #F8FAFD;
 }
